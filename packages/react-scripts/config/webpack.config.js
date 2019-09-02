@@ -244,6 +244,8 @@ module.exports = function(webpackEnv) {
             // We want to keep classnames, otherwise the react components' name
             // will be gone after minified
             keep_classnames: true,
+            // Also this, 
+            keep_fnames: true
           },
           // Use multi-process parallel running to improve the build speed
           // Default number of concurrent runs: os.cpus().length - 1
