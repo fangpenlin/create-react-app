@@ -249,6 +249,9 @@ module.exports = function(webpackEnv) {
           parallel: !isWsl,
           // Enable file caching
           cache: true,
+          // We want to keep classnames, otherwise the react components' name
+          // will be gone after minified
+          keep_classnames: true,
           sourceMap: shouldUseSourceMap,
         }),
         // This is only used in production mode
