@@ -241,6 +241,9 @@ module.exports = function(webpackEnv) {
               // https://github.com/facebook/create-react-app/issues/2488
               ascii_only: true,
             },
+            // We want to keep classnames, otherwise the react components' name
+            // will be gone after minified
+            keep_classnames: true,
           },
           // Use multi-process parallel running to improve the build speed
           // Default number of concurrent runs: os.cpus().length - 1
@@ -249,9 +252,6 @@ module.exports = function(webpackEnv) {
           parallel: !isWsl,
           // Enable file caching
           cache: true,
-          // We want to keep classnames, otherwise the react components' name
-          // will be gone after minified
-          keep_classnames: true,
           sourceMap: shouldUseSourceMap,
         }),
         // This is only used in production mode
